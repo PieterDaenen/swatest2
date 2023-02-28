@@ -1,25 +1,47 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.14",
+  "version": "1.0.0",
+  "id": "f2ab69f4-4d73-4a80-a6f8-a32f323d6da0",
+  "packageName": "com.microsoft.teams.extension",
+  "developer": {
+      "name": "Pieter Daenen",
+      "websiteUrl": "https://jolly-tree-0cca8e603.2.azurestaticapps.net/",
+      "privacyUrl": "https://jolly-tree-0cca8e603.2.azurestaticapps.net/",
+      "termsOfUseUrl": "https://jolly-tree-0cca8e603.2.azurestaticapps.net/"
+  },
+  "icons": {
+    "color": "resources/color.png",
+    "outline": "resources/outline.png"
+  },
+  "name": {
+      "short": "React App",
+      "full": "Static Web App | Test & Playground v2"
+  },
+  "description": {
+      "short": "Sandbox SWA",
+      "full": "Test Static Web Apps"
+  },
+  "accentColor": "#FFFFFF",
+  "staticTabs": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
+        "entityId": "Persoonlijke tab",
+        "scopes": [
+            "personal"
+        ],
+        "name": "Persoonlijke tab, ticketbeheer",
+        "contentUrl": "https://jolly-tree-0cca8e603.2.azurestaticapps.net/",
+        "websiteUrl": "https://jolly-tree-0cca8e603.2.azurestaticapps.net/"
+    }],
+    "webApplicationInfo": {
+      "id": "f2ab69f4-4d73-4a80-a6f8-a32f323d6da0",
+      "resource": "https://notapplicable"
+  },
+  "bots": [
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+      "botId": "dfad8157-5772-4531-b03c-6af21c255796",
+      "scopes": [
+        "personal"
+      ]
+    }]
 }
