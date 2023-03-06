@@ -4,7 +4,7 @@ function Welcome() {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    fetch('https://localhost:7127//api/test2')
+    fetch('https://localhost:7127/api/test2')
       .then(response => response.json())
       .then(data => setUsername(data))
       .catch(error => console.error(error));
