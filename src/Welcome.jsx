@@ -6,7 +6,7 @@ function Welcome() {
   useEffect(() => {
     fetch('https://localhost:7127//api/test2')
       .then(response => response.json())
-      .then(data => setUsername(data.username))
+      .then(data => setUsername(data))
       .catch(error => console.error(error));
   }, []);
 
