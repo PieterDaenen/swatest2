@@ -4,7 +4,9 @@ function Welcome() {
     const [username, setUsername] = useState('');
 
     async function fetchText() {
-        let response = await fetch('https://localhost:7127/api/test2');
+        let response = await fetch('https://localhost:7127/api/test2', {
+            mode : 'no-cors'
+        });
     
         console.log(response.status); // 200
         console.log(response.statusText); // OK
