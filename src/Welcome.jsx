@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Welcome(props) {
-  return <h1>Welcome {props.username}!</h1>;
+function Welcome() {
+  return <h1>Welcome!</h1>;
 }
 
 export default Welcome;
