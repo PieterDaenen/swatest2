@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from 'react';
 
 function Welcome() {
-  const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('');
 
-  useEffect(() => {
-    fetch('https://localhost:7127/api/test2')
-    .then(console.log("request gebeurt hier"))
-      .then(response => response.json())
-      .then(data => setUsername(data))
-      .catch(error => console.error(error));
-  }, []);
+    async function fetchText() {
+        let response = await fetch('https://localhost:7127/api/test2');
+    
+        console.log(response.status); // 200
+        console.log(response.statusText); // OK
+    
+        if (response.status === 200) {
+            let data = await response.text();
+            console.log(data);
+            setUsername(data); // Update the state of the username variable
+        }
+    }
 
-  return <h1>Welcome {username}!</h1>;
+    useEffect(() => {
+        fetchText();
+    }, []);
+
+    return <h1>Welcome {username}!</h1>;
 }
 
 export default Welcome;
